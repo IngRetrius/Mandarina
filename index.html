@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPA: SGI - Máquina de Diseño Estandarizado | Mandarina Proyectos Arquitectónicos</title>
+
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Mandarina Proyectos Arquitectónicos transforma el diseño arquitectónico con IA, VR/AR y BIM. Experiencia inmersiva, cero reprocesos, 90% satisfacción.">
+    <meta name="keywords" content="arquitectura, diseño arquitectónico, BIM, realidad virtual, inteligencia artificial, VR, AR, proyectos arquitectónicos">
+    <meta name="author" content="Mandarina Proyectos Arquitectónicos">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MPA: Arquitectura con IA, VR y BIM">
+    <meta property="og:description" content="Redefiniendo el Lujo y la Arquitectura con Co-Creación Tecnológica">
+    <meta property="og:image" content="assets/hero1.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MPA: Arquitectura con IA, VR y BIM">
+    <meta name="twitter:description" content="Redefiniendo el Lujo y la Arquitectura con Co-Creación Tecnológica">
+
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de la fuente Inter -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="antialiased text-gray-800">
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navbar con Logo (aparece al scroll) -->
+    <nav class="navbar-scroll" id="navbarScroll">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center">
+            <a href="#" class="flex items-center" id="logoNavLink">
+                <img src="assets/logo.svg" alt="Mandarina Proyectos Arquitectónicos" class="navbar-scroll-logo">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section Fullscreen -->
+    <header class="hero-background text-white px-4 md:px-10 text-center shadow-2xl relative overflow-hidden flex items-center justify-center" style="min-height: 100vh; padding-top: 60px; padding-bottom: 80px;">
+        <div class="max-w-4xl mx-auto z-10 relative w-full">
+
+            <div class="fade-in flex flex-col items-center">
+                <img src="assets/logo.svg" alt="Mandarina Proyectos Arquitectónicos" class="hero-logo">
+            </div>
+
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white fade-in" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.3); line-height: 1.2; margin-top: 0;">
+                <span style="color: var(--color-secondary);">De Planos a la Perfección Inmersiva</span>
+            </h1>
+            <p class="text-lg md:text-xl lg:text-2xl font-light mb-8 text-gray-200 fade-in">
+                Redefiniendo el Lujo y la Arquitectura con <strong class="text-white">Co-Creación Tecnológica</strong>.
+            </p>
+            <a href="#problema" class="inline-block text-white font-bold py-4 px-10 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 hover:shadow-2xl fade-in" style="background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));">
+                ¡Explore Nuestra Innovación!
+            </a>
+        </div>
+    </header>
+
+    <!-- Sección 1: El Problema (Empatía) -->
+    <section id="problema" class="py-20 px-4 md:px-10 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 text-gray-900 fade-in">1. El Desafío del Diseño Tradicional</h2>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <div class="bg-red-50 p-8 rounded-2xl shadow-xl border-l-4 border-red-500 transform hover:scale-[1.01] transition duration-300 fade-in-left">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center text-red-700">
+                        <svg class="w-7 h-7 mr-3 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Dependencia Humana: El Cuello de Botella
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        La eficiencia depende de una sola persona. La falta de estandarización limita el crecimiento y aumenta el riesgo de errores.
+                    </p>
+                    <p class="font-bold text-red-600">
+                        Nuestro SGI transforma la genialidad individual en eficiencia sistémica.
+                    </p>
+                </div>
+
+                <div class="bg-blue-50 p-8 rounded-2xl shadow-xl border-r-4 border-blue-500 transform hover:scale-[1.01] transition duration-300 fade-in-right">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center text-blue-700">
+                        <svg class="w-7 h-7 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        El Dolor del Cliente: Decepción y Reprocesos
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>Reprocesos:</strong> Cambios constantes por interpretaciones subjetivas.</li>
+                        <li><strong>Costos y Tiempos:</strong> Retrasos por malentendidos en obra.</li>
+                        <li><strong>Frustración:</strong> El resultado final no es fiel a la visión original.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Franja Visual Abstracta -->
+    <section id="visual-break" class="abstract-gradient-section h-48 flex items-center justify-center text-center shadow-inner overflow-hidden my-12">
+        <div class="abstract-overlay absolute inset-0"></div>
+        <div class="relative z-10 p-4 max-w-4xl mx-auto">
+            <h3 class="text-3xl md:text-4xl font-extrabold text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                Innovación. Eficiencia. Calidad Superior.
+            </h3>
+        </div>
+    </section>
+
+    <!-- Sección 2: La Solución Interactiva (El SGI y el Reto de Innovación) -->
+    <section id="solucion-interactiva" class="bg-gray-100 py-20 px-4 md:px-10 shadow-inner">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-6 text-gray-900 fade-in">2. Nuestro SGI: La <span style="color: var(--color-primary);">Máquina de Diseño Estandarizado</span></h2>
+            <p class="text-center text-lg mb-12 text-gray-600 fade-in">Haga clic en cada fase para explorar el innovador proceso de diseño arquitectónico de MPA:</p>
+
+            <!-- Contenedor del Diagrama de Proceso (Fases) -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-10 process-steps-grid">
+                <div id="step-1" class="process-step bg-white p-4 text-center rounded-xl active scale-in" role="button" tabindex="0" aria-label="Paso 1: Conectar y Comprender">
+                    <svg class="process-step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <span class="text-2xl font-bold block mb-1" style="color: var(--color-primary);">1</span>
+                    <p class="font-semibold text-sm">Conectar y Comprender</p>
+                </div>
+                <div id="step-2" class="process-step bg-white p-4 text-center rounded-xl scale-in" role="button" tabindex="0" aria-label="Paso 2: Co-Crear con Tecnología">
+                    <svg class="process-step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span class="text-2xl font-bold block mb-1" style="color: var(--color-primary);">2</span>
+                    <p class="font-semibold text-sm">Co-Crear con Tecnología</p>
+                </div>
+                <div id="step-3" class="process-step bg-white p-4 text-center rounded-xl scale-in" role="button" tabindex="0" aria-label="Paso 3: Definir y Validar Inmersivo">
+                    <svg class="process-step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <span class="text-2xl font-bold block mb-1" style="color: var(--color-primary);">3</span>
+                    <p class="font-semibold text-sm">Definir y Validar Inmersivo</p>
+                </div>
+                <div id="step-4" class="process-step bg-white p-4 text-center rounded-xl scale-in" role="button" tabindex="0" aria-label="Paso 4: Planos con Cero Dudas">
+                    <svg class="process-step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <span class="text-2xl font-bold block mb-1" style="color: var(--color-primary);">4</span>
+                    <p class="font-semibold text-sm">Planos con Cero Dudas</p>
+                </div>
+                <div id="step-5" class="process-step bg-white p-4 text-center rounded-xl scale-in" role="button" tabindex="0" aria-label="Paso 5: Acompañamiento y Monitoreo">
+                    <svg class="process-step-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span class="text-2xl font-bold block mb-1" style="color: var(--color-primary);">5</span>
+                    <p class="font-semibold text-sm">Acompañamiento y Monitoreo</p>
+                </div>
+            </div>
+
+            <!-- Contenedor de Descripción Dinámica -->
+            <div id="description-box" class="bg-white p-8 md:p-12 rounded-2xl border-t-4 shadow-xl transition-all duration-500 ease-in-out" style="border-color: var(--color-primary);">
+                <h3 id="description-title" class="text-2xl font-bold mb-4 text-gray-900">1. Conectar y Comprender la Visión</h3>
+                <p id="description-text" class="text-lg text-gray-700 leading-relaxed">
+                    <strong style="color: var(--color-primary);">Fase clave de Empatía.</strong> Usamos herramientas como el <strong>Mapa de Empatía</strong> para entender profundamente las necesidades no atendidas y la visión del cliente. Formamos una visión compartida del proyecto desde el inicio.
+                </p>
+
+                <!-- Elemento Visual Dinámico (Simulación de Tecnología) -->
+                <div id="visual-cue" class="mt-8 p-5 rounded-xl bg-gray-50 text-center border border-gray-200 transform hover:scale-[1.01] transition duration-300">
+                    <div id="visual-cue-icon" class="w-12 h-12 mx-auto mb-3 text-blue-500">
+                        <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <p id="visual-cue-text" class="text-base font-semibold text-gray-700">Herramienta: Mapa de Empatía. Objetivo: Visión compartida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Resultados y Impacto (Métricas) -->
+    <section id="impacto" class="py-20 px-4 md:px-10 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 text-gray-900 fade-in">3. El Impacto: Criterios de Éxito del SGI</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-yellow-500 hover:shadow-xl transition duration-300 transform hover:translate-y-[-5px] impact-card scale-in">
+                    <div class="text-5xl font-extrabold mb-3 text-yellow-600">100%</div>
+                    <h3 class="font-bold text-xl mb-2 text-gray-900">Tecnología Integrada</h3>
+                    <p class="text-sm text-gray-600">Incorporación de al menos una tecnología emergente (IA/RA/VR) en el proceso arquitectónico.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-green-500 hover:shadow-xl transition duration-300 transform hover:translate-y-[-5px] impact-card scale-in">
+                    <div class="text-5xl font-extrabold mb-3 text-green-600">70%</div>
+                    <h3 class="font-bold text-xl mb-2 text-gray-900">Participación del Cliente</h3>
+                    <p class="text-sm text-gray-600">Participación activa de los clientes en al menos el 70% de las fases de diseño clave.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-blue-500 hover:shadow-xl transition duration-300 transform hover:translate-y-[-5px] impact-card scale-in">
+                    <div class="text-5xl font-extrabold mb-3 text-blue-600">+90%</div>
+                    <h3 class="font-bold text-xl mb-2 text-gray-900">Índice de Satisfacción</h3>
+                    <p class="text-sm text-gray-600">Lograr un índice de satisfacción superior al 90% en la experiencia de personalización.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-red-500 hover:shadow-xl transition duration-300 transform hover:translate-y-[-5px] impact-card scale-in">
+                    <div class="text-5xl font-extrabold mb-3" style="color: var(--color-primary);">20%</div>
+                    <h3 class="font-bold text-xl mb-2 text-gray-900">Reducción de Reprocesos</h3>
+                    <p class="text-sm text-gray-600">Meta de reducción de reprocesos por malentendidos en el diseño <strong style="color: var(--color-primary);">(Objetivo SGI)</strong>.</p>
+                </div>
+
+            </div>
+
+            <div class="mt-16 text-center">
+                <p class="text-2xl font-bold mb-6 text-gray-800">El SGI es nuestro motor: <strong style="color: var(--color-primary);">Optimización del Proceso y Producto de Lujo</strong></p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-5 py-2 bg-gray-200 text-gray-800 rounded-full text-base font-medium transition duration-300 hover:bg-gray-300">Optimización de Procesos <strong style="color: var(--color-primary);">70%</strong></span>
+                    <span class="px-5 py-2 bg-gray-200 text-gray-800 rounded-full text-base font-medium transition duration-300 hover:bg-gray-300">Producto Innovador <strong style="color: var(--color-primary);">30%</strong></span>
+                    <span class="px-5 py-2 bg-gray-200 text-gray-800 rounded-full text-base font-medium transition duration-300 hover:bg-gray-300">Compromiso con el Cliente</span>
+                    <span class="px-5 py-2 bg-gray-200 text-gray-800 rounded-full text-base font-medium transition duration-300 hover:bg-gray-300">Gestión del Conocimiento</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 4: Call to Action (CTA) / Footer -->
+    <footer id="contacto" class="bg-gray-900 py-16 px-4 md:px-10 text-white rounded-t-3xl shadow-2xl">
+        <div class="max-w-6xl mx-auto">
+            <!-- CTA Principal -->
+            <div class="max-w-xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-extrabold mb-4 text-white fade-in" style="color: var(--color-secondary);">¿Listo para Co-Crear su Visión de Lujo?</h2>
+                <p class="text-xl font-light mb-10 text-gray-300 fade-in">
+                    Agende una <strong class="text-white">Demo Inmersiva GRATUITA</strong> y experimente la arquitectura del futuro.
+                </p>
+
+                <form id="contact-form" class="space-y-5 fade-in">
+                    <input type="text" name="name" placeholder="Su Nombre" required aria-label="Nombre" class="w-full p-4 rounded-lg text-gray-900 bg-white/90 focus:outline-none focus:ring-4 focus:ring-orange-500 focus:bg-white transition duration-300 placeholder-gray-500" />
+                    <input type="email" name="email" placeholder="Correo Electrónico Empresarial" required aria-label="Email" class="w-full p-4 rounded-lg text-gray-900 bg-white/90 focus:outline-none focus:ring-4 focus:ring-orange-500 focus:bg-white transition duration-300 placeholder-gray-500" />
+                    <button type="submit" class="w-full py-4 px-6 rounded-lg font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl" style="background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); color: white;">
+                        Agendar Mi Demo Inmersiva
+                    </button>
+                </form>
+
+                <p id="submission-message" class="text-lg mt-8 text-green-400 font-semibold hidden">
+                    ¡Gracias por su interés! Un especialista se contactará con usted a la brevedad.
+                </p>
+            </div>
+
+            <!-- Info de Contacto -->
+            <div class="border-t border-gray-700 pt-12 grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div class="fade-in">
+                    <h3 class="text-lg font-bold mb-4" style="color: var(--color-secondary);">Contacto</h3>
+                    <p class="text-gray-400 mb-2">
+                        <a href="mailto:info@mandarina-pa.com" class="hover:text-white transition">info@mandarina-pa.com</a>
+                    </p>
+                    <p class="text-gray-400">
+                        <a href="tel:+571234567890" class="hover:text-white transition">+57 (1) 234 5678</a>
+                    </p>
+                </div>
+
+                <div class="fade-in">
+                    <h3 class="text-lg font-bold mb-4" style="color: var(--color-secondary);">Ubicación</h3>
+                    <p class="text-gray-400">Bogotá, Colombia</p>
+                    <p class="text-gray-400">Cámara de Comercio de Bogotá</p>
+                </div>
+
+                <div class="fade-in">
+                    <h3 class="text-lg font-bold mb-4" style="color: var(--color-secondary);">Síguenos</h3>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-sm text-gray-500">
+                    © 2024 Mandarina Proyectos Arquitectónicos | Impulsado por la Innovación de la Cámara de Comercio de Bogotá.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/573001234567?text=Hola,%20quiero%20agendar%20una%20demo%20inmersiva" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

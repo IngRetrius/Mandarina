@@ -1,0 +1,380 @@
+/* Definiciones de color y estilos de Mandarina */
+:root {
+    --color-primary: #f26622; /* Naranja Mandarina */
+    --color-secondary: #ffac31; /* Amarillo Naranja */
+    --color-dark: #1f2937; /* Gris Oscuro/Negro */
+    --color-light-orange: #fff7ed; /* Naranja muy claro para fondos */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8;
+    line-height: 1.6;
+    padding-top: 0;
+}
+
+/* Hero con imagen de fondo fullscreen */
+.hero-background {
+    position: relative;
+    background-image: linear-gradient(rgba(17, 24, 39, 0.4), rgba(31, 41, 55, 0.5)), url('../assets/hero1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: none;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #111827, #374151, var(--color-dark), #1f2937);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.hero-background > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Logo en Hero */
+.hero-logo {
+    height: 280px;
+    width: auto;
+    max-width: 380px;
+    transition: transform 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.hero-logo:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero-logo {
+        height: 160px;
+        max-width: 280px;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Franja de Color Dinámica */
+.abstract-gradient-section {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-primary));
+    background-size: 300% 300%;
+    animation: gradientScroll 10s ease infinite;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes gradientScroll {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Estilos de los Pasos (CRÍTICO para la interactividad) */
+.process-step {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    transform: scale(0.98);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.process-step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(242, 102, 34, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.process-step:hover::before {
+    left: 100%;
+}
+
+.process-step:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.15);
+}
+
+.process-step.active {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--color-primary);
+    background-color: var(--color-light-orange);
+    color: var(--color-dark);
+}
+
+.process-step-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 8px;
+    color: var(--color-primary);
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover .process-step-icon,
+.process-step.active .process-step-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Mobile: 1 columna */
+@media (max-width: 768px) {
+    .process-steps-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Estilos de Títulos */
+h2 {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    animation: scaleIn 0.6s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 80px;
+        opacity: 1;
+    }
+}
+
+/* Animaciones de entrada - Lazy Loading */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Transición de contenido dinámico */
+.content-transition {
+    animation: fadeInContent 0.5s ease-in-out;
+}
+
+@keyframes fadeInContent {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+    }
+}
+
+/* Mejoras en cards de impacto */
+.impact-card {
+    transition: all 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer mejorado */
+footer a {
+    color: #e5e7eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--color-secondary);
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+/* Responsive mejoras */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-float svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    z-index: 1002;
+    transition: width 0.1s ease-out;
+}
+
+/* Navbar con Logo al Scroll */
+.navbar-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(31, 41, 55, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    transform: translateY(-100%);
+    opacity: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-scroll.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.navbar-scroll-logo {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 10px rgba(242, 102, 34, 0.3));
+}
+
+.navbar-scroll-logo:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .navbar-scroll-logo {
+        height: 40px;
+    }
+}
